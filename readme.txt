@@ -3,7 +3,7 @@ Please report any bugs or feature requests by opening an issue at https://github
 
 Basic Installation steps required:
  1) Download pfelk installation script from https://github.com/3ilson/pfelk
-   a) sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/ez-pfelk-installer.sh
+   a) sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/ez-pfelk-installer.sh
   I) Docker-pfelk from https://github.com/3ilson/docker-pfelk
   II) Docker-ansible from https://github.com/3ilson/ansible-pfelk
  2) Install 

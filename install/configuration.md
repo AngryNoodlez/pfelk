@@ -79,7 +79,7 @@ systemctl start logstash.service
 ### 5b. Login to OPNsense and forward syslogs
 - In OPNsense navigate to System->Settings->Logging/Targets
 - Add a new Logging/Target (Click the plus icon)
-![OPNsense](https://raw.githubusercontent.com/3ilson/pfelk/master/Images/opnsense-logs.png)
+![OPNsense](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Images/opnsense-logs.png)
 - Transport = UDP(4)
 - Applications = Nothing Selected
 - Levels = Nothing Selected
@@ -88,7 +88,7 @@ systemctl start logstash.service
 - Port = 5140
 - Description = pfELK
 - Click Save
-![OPNsense](https://raw.githubusercontent.com/3ilson/pfelk/master/Images/opnsense-remote.png)
+![OPNsense](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Images/opnsense-remote.png)
 ### 5c. Configure Suricata for log forwarding - pfSense (Optional) 
  - On your pfSense web UI got to Services / Suricata / Interfaces, and enable Suricata on desired interfaces
  - You can have separate configuration on each of your interfaces, you can edit them via clicking on the pencil icon
@@ -111,7 +111,7 @@ systemctl start logstash.service
  - Rotate log = Default / Weekly / Daily
  - Save logs = Any Value You Desire
  - Click Apply
-![OPNsense-Suricata](https://raw.githubusercontent.com/3ilson/pfelk/master/Images/opnsense-suricata.png)
+![OPNsense-Suricata](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Images/opnsense-suricata.png)
 # Kibana 
 ### 6a. Configuring Patterns
 [YouTube Guide](https://www.youtube.com/watch?v=uBSRaUOgEz8)
@@ -124,6 +124,6 @@ systemctl start logstash.service
  - In your web browser go to the ELK local IP using port 5601 (ex: 192.168.0.1:5601)
  - Click Management -> Saved Objects
  - You can import the dashboards found in the `Dashboard` folder via the Import button in the top-right corner.
- - [pfELK Dashboard](https://raw.githubusercontent.com/3ilson/pfelk/master/Dashboard/v4.2%20(042020)%20Dashboard.ndjson)
- - [Suricata Dashboard](https://raw.githubusercontent.com/3ilson/pfelk/master/Dashboard/v4.2%20(042020)%20Suricata%20Dashboard.ndjson)
- - [Snort Dashboard](https://raw.githubusercontent.com/3ilson/pfelk/master/Dashboard/v4.2%20(042020)%20Snort%20Dashboard.ndjson)
+ - [pfELK Dashboard](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Dashboard/v4.2%20(042020)%20Dashboard.ndjson)
+ - [Suricata Dashboard](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Dashboard/v4.2%20(042020)%20Suricata%20Dashboard.ndjson)
+ - [Snort Dashboard](https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/Dashboard/v4.2%20(042020)%20Snort%20Dashboard.ndjson)

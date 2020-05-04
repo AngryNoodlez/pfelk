@@ -104,20 +104,20 @@ cd /data/elk/configurations
 
 ### 15. (Required) Download the following configuration files
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/01-inputs.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/05-firewall.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/30-geoip.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/50-outputs.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/01-inputs.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/05-firewall.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/30-geoip.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/50-outputs.conf
 ```
 
 ### 15a. (Optional) Download the following configuration files
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/10-others.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/20-suricata.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/25-snort.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/35-rules-desc.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/40-dns.conf
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/45-cleanup.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/10-others.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/20-suricata.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/25-snort.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/35-rules-desc.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/40-dns.conf
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/45-cleanup.conf
 ```
 
 ### 16. Make Patterns Folder
@@ -132,7 +132,7 @@ cd /data/elk/patterns/
 
 ### 18. Download the grok pattern
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/patterns/pfelk.grok
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/patterns/pfelk.grok
 ```
 
 ### 19. Make Template Folder
@@ -147,7 +147,7 @@ cd /data/elk/templates/
 
 ### 21. Download Template(s)
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/templates/pf-geoip-template.json
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/templates/pf-geoip-template.json
 ```
 
 ### 22. Navigate to Logstash 
@@ -157,12 +157,12 @@ cd /etc/logstash/
 
 ### 23. Download pipelines.yml
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/pipelines.yml
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/pipelines.yml
 ```
 
 ### 24. Download logstash.yml
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/logstash.yml
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/logstash.yml
 ```
 
 ### 25. Enter your pfSense/OPNsense IP address (/data/elk/configurations/01-inputs.conf)
@@ -196,7 +196,7 @@ cd /data/elk/
 
 ### 30. Download `error-data.sh`
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/error-data.sh
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/error-data.sh
 ```
 
 ### 31. Make `error-data.sh` Executable

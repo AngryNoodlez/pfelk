@@ -136,20 +136,20 @@ sudo swapoff -a
   sudo mkdir /data/elk/logs
   sudo mkdir /data/elk/GeoIP
   cd /data/elk/configurations
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/01-inputs.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/05-firewall.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/10-others.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/20-suricata.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/25-snort.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/30-geoip.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/35-rules-desc.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/40-dns.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/45-cleanup.conf
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/50-outputs.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/01-inputs.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/05-firewall.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/10-others.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/20-suricata.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/25-snort.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/30-geoip.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/35-rules-desc.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/40-dns.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/45-cleanup.conf
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/configurations/50-outputs.conf
   cd /data/elk/patterns
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/patterns/pfelk.grok
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/patterns/pfelk.grok
   cd /data/elk/templates
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/templates/pf-geoip-template.json
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/data/templates/pf-geoip-template.json
 ##
 # Add Configuration Script Here
 ##
@@ -157,12 +157,12 @@ sudo swapoff -a
 # Install/Troubleshoot Success Message
 echo "pfELK: Finalizing Installtion"
   cd /etc/logstash
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/pipelines.yml
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/logstash.yml
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/pipelines.yml
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/logstash.yml
   cd /data/elk
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/error-data.sh
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/error-data.sh
   sudo chmod +x /data/elk/error-data.sh
   sudo chmod 777 /data/elk/logs
-  sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/readme.txt
+  sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/readme.txt
   cat readme.txt
 exit 0

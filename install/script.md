@@ -10,7 +10,7 @@
 
 ## 0a. Download and Run Script
 ```
-sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/ez-pfelk-installer.sh
+sudo wget https://raw.githubusercontent.com/AngryNoodlez/pfelk/master/ez-pfelk-installer.sh
 ```
 ### 0b. Make the script executable 
 ```
