@@ -41,7 +41,7 @@ EditionIDs GeoLite2-City GeoLite2-Country GeoLite2-ASN
 ```
 #### 1e. Download Maxmind Databases
 ```
-sudo geoipupdate -d /data/pfELK/GeoIP/
+sudo geoipupdate -d /data/elk/GeoIP/
 ```
 #### 1f. Add cron 
 ```
@@ -49,18 +49,18 @@ sudo nano /etc/cron.weekly/geoipupdate
 ```
 #### 1g. Add the following and save/exit (automatically updates Maxmind every week on Sunday at 1700hrs)
 ```
-00 17 * * 0 geoipupdate -d /data/pfELK/GeoIP
+00 17 * * 0 geoipupdate -d /data/elk/GeoIP
 ```
 ## 2. Configure Logstash|v7.6+
 #### 2a. Enter your pfSense/OPNsense IP address 
-`sudo nano /data/pfELK/configurations/01-inputs.conf`
+`sudo nano /data/elk/configurations/01-inputs.conf`
 ```
 Change line 12; the "if [host] =~ ..." should point to your pfSense/OPNsense IP address
 Change line 15; rename "firewall" (OPTIONAL) to identify your device (i.e. backup_firewall)
 Change line 18-27; (OPTIONAL) to point to your second PF IP address or ignore
 ```
 #### 2b. Revise/Update w/pf IP address 
-`sudo nano /data/pfELK/configurations/01-inputs.conf`
+`sudo nano /data/elk/configurations/01-inputs.conf`
 ```
 For pfSense uncommit line 34 and commit out line 31
 For OPNsense uncommit line 31 and commit out line 34

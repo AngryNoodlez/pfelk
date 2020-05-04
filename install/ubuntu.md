@@ -63,10 +63,10 @@ EditionIDs GeoLite2-City GeoLite2-Country GeoLite2-ASN
 ### 9. Create Directories and Download Maxmind Databases
 ```
 sudo mkdir /data
-sudo mkdir /data/pfELK
-sudo mkdir /data/pfELK/GeoIP
+sudo mkdir /data/elk
+sudo mkdir /data/elk/GeoIP
 
-sudo geoipupdate -d /data/pfELK/GeoIP/
+sudo geoipupdate -d /data/elk/GeoIP/
 ```
 
 ### 10. Add cron (automatically updates Maxmind everyweek on Sunday at 1700hrs)
@@ -75,7 +75,7 @@ sudo nano /etc/cron.weekly/geoipupdate
 ```
 - Add the following and save/exit
 ```
-00 17 * * 0 geoipupdate -d /data/pfELK/GeoIP
+00 17 * * 0 geoipupdate -d /data/elk/GeoIP
 ```
 
 # Installation
@@ -99,7 +99,7 @@ sudo nano /etc/kibana/kibana.yml
 
 ### 14. Change Directory
 ```
-cd /data/pfELK/configurations
+cd /data/elk/configurations
 ```
 
 ### 15. (Required) Download the following configuration files
@@ -122,12 +122,12 @@ sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurati
 
 ### 16. Make Patterns Folder
 ```
-sudo mkdir /data/pfELK/patterns
+sudo mkdir /data/elk/patterns
 ```
 
 ### 17. Navigate to Patterns Folder
 ```
-cd /data/pfELK/patterns/
+cd /data/elk/patterns/
 ```
 
 ### 18. Download the grok pattern
@@ -137,12 +137,12 @@ sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/patterns/pf
 
 ### 19. Make Template Folder
 ```
-sudo mkdir /data/pfELK/templates
+sudo mkdir /data/elk/templates
 ```
 
 ### 20. Navigate to Template Folder
 ```
-cd /data/pfELK/templates/
+cd /data/elk/templates/
 ```
 
 ### 21. Download Template(s)
@@ -165,14 +165,14 @@ sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/pipelines.yml
 sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/logstash.yml
 ```
 
-### 25. Enter your pfSense/OPNsense IP address (/data/pfELK/configurations/01-inputs.conf)
+### 25. Enter your pfSense/OPNsense IP address (/data/elk/configurations/01-inputs.conf)
 ```
 Change line 12; the "if [host] =~ ..." should point to your pfSense/OPNsense IP address
 Change line 15; rename "firewall" (OPTIONAL) to identify your device (i.e. backup_firewall)
 Change line 18-27; (OPTIONAL) to point to your second PF IP address or ignore
 ```
 
-### 26. Revise/Update w/pf IP address (/data/pfELK/configurations/01-inputs.conf)
+### 26. Revise/Update w/pf IP address (/data/elk/configurations/01-inputs.conf)
 ```
 For pfSense uncommit line 34 and commit out line 31
 For OPNsense uncommit line 31 and commit out line 34
@@ -181,17 +181,17 @@ For OPNsense uncommit line 31 and commit out line 34
 # Troubleshooting
 ### 27. Create Logging Directory 
 ```
-sudo mkdir /data/pfELK/logs
+sudo mkdir /data/elk/logs
 ```
 
 ### 28. Enable Write Permissions for Logging Directory
 ```
-sudo chmod 777 /data/pfELK/logs
+sudo chmod 777 /data/elk/logs
 ```
 
 ### 29. Navigate to pfELK 
 ```
-cd /data/pfELK/
+cd /data/elk/
 ```
 
 ### 30. Download `error-data.sh`
@@ -201,7 +201,7 @@ sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/error-data.sh
 
 ### 31. Make `error-data.sh` Executable
 ```
-sudo chmod +x /data/pfELK/error-data.sh
+sudo chmod +x /data/elk/error-data.sh
 ```
 
 ### 32. Complete Configuration --> [Configuration](configuration.md)

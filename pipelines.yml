@@ -3,4 +3,4 @@
 #   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
 
 - pipeline.id: main
-  path.config: "/data/pfELK/configurations/*.conf"
+  path.config: "/data/elk/configurations/*.conf"

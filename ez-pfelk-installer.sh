@@ -129,13 +129,13 @@ sudo swapoff -a
 # Download Configuration & Pattern
   echo "pfELK: Retrieving Confguration Files"
   sudo mkdir /data 
-  sudo mkdir /data/pfELK
-  sudo mkdir /data/pfELK/patterns
-  sudo mkdir /data/pfELK/templates
-  sudo mkdir /data/pfELK/configurations
-  sudo mkdir /data/pfELK/logs
-  sudo mkdir /data/pfELK/GeoIP
-  cd /data/pfELK/configurations
+  sudo mkdir /data/elk
+  sudo mkdir /data/elk/patterns
+  sudo mkdir /data/elk/templates
+  sudo mkdir /data/elk/configurations
+  sudo mkdir /data/elk/logs
+  sudo mkdir /data/elk/GeoIP
+  cd /data/elk/configurations
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/01-inputs.conf
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/05-firewall.conf
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/10-others.conf
@@ -146,9 +146,9 @@ sudo swapoff -a
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/40-dns.conf
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/45-cleanup.conf
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/configurations/50-outputs.conf
-  cd /data/pfELK/patterns
+  cd /data/elk/patterns
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/patterns/pfelk.grok
-  cd /data/pfELK/templates
+  cd /data/elk/templates
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/data/templates/pf-geoip-template.json
 ##
 # Add Configuration Script Here
@@ -159,10 +159,10 @@ echo "pfELK: Finalizing Installtion"
   cd /etc/logstash
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/pipelines.yml
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/logstash.yml
-  cd /data/pfELK
+  cd /data/elk
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/error-data.sh
-  sudo chmod +x /data/pfELK/error-data.sh
-  sudo chmod 777 /data/pfELK/logs
+  sudo chmod +x /data/elk/error-data.sh
+  sudo chmod 777 /data/elk/logs
   sudo wget https://raw.githubusercontent.com/3ilson/pfelk/master/readme.txt
   cat readme.txt
 exit 0

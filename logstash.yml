@@ -205,7 +205,7 @@ path.data: /var/lib/logstash
 #   * trace
 #
 # log.level: info
-path.logs: /data/pfELK/logs
+path.logs: /data/elk/logs
 #
 # ------------ Other Settings --------------
 #
